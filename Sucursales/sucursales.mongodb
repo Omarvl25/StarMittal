@@ -6,7 +6,7 @@ db.createCollection("sucursales", {
     validator: {
         $jsonSchema: {
             bsonType: 'object',
-            required: ['nombre', 'direccion', 'telefono'],
+            required: ['nombre', 'direccion', 'telefono'],//modifique los requerimentos
             properties: {
                 id_sucursal: { bsonType: 'int' },
                 nombre: { bsonType: 'string' },
