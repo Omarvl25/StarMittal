@@ -3,6 +3,4 @@
 
 // Consultar los registros
     // SELECT * FROM sucursales
-    db.sucursales.find()
-
-/////
+    db.sucursales.find();
