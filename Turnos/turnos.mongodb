@@ -1,0 +1,23 @@
+// Usar la Base de Datos
+    use("star-mittal")
+
+// Crear la coleccion
+    db.createCollection("turnos", {
+        validator: {
+            $jsonSchema: {
+              bsonType: 'object',
+              required: ['id_turno', 'hora_inicio', 'hora_fin'],
+              properties: {
+                id_turno: { bsonType: 'int' },
+                hora_inicio: {
+                  bsonType: 'string',
+                  description: 'Debe ser un string en formato de hora (HH:MM:SS) y es requerido.'
+                },
+                hora_fin: {
+                  bsonType: 'string',
+                  description: 'Debe ser un string en formato de hora (HH:MM:SS) y es requerido.'
+                }
+              }
+            }
+        }
+    });
