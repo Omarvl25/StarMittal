@@ -2,4 +2,4 @@
     use("star-mittal")
 
 // Eliminar la coleccion
-    db.sucursales.drop()
+    db.sucursales.drop();
