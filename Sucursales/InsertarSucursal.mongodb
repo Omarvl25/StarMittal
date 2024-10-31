@@ -1,0 +1,13 @@
+// Usar la Base de Datos
+    use("star-mittal")
+
+// Insertar el documento en la coleccion
+    db.sucursales.insertOne({
+        id_sucursal: 1,
+        nombre: "Sucursal Centro",
+        direccion: "Avenida Central 100",
+        telefono: [
+            "9876543210",
+            "1234567890"
+        ]
+    });
