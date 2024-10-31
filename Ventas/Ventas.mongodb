@@ -21,7 +21,7 @@ db.createCollection("ventas", {
         tipo_venta: { bsonType: 'string' }, // "Local" o "En línea"
         tipo_pago: { bsonType: 'string' }, // "Efectivo", "Tarjeta", "Transferencia"
         total: { bsonType: 'double' },
-        
+        ///////////
         detalles_venta: {
           bsonType: 'array',
           minItems: 1,

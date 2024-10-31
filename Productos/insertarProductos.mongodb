@@ -2,7 +2,7 @@
 
 use("star-mittal")
 
-
+//
 // Insertar un producto con inventario en la colección productos
 
 

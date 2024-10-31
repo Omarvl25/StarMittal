@@ -2,4 +2,4 @@ use("star-mittal")
 
 // Consultar los registros
 
-    db.productos.find()
+    db.productos.find()//

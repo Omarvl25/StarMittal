@@ -1,5 +1,5 @@
 // Usar la Base de Datos
-use("star-mittal")
+use("star-mittal")///
 
 // Crear la Validación de productos e inventario como array embebido
 db.createCollection("productos", {
