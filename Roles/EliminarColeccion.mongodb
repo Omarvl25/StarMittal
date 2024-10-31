@@ -1,0 +1,5 @@
+// Usar la Base de Datos
+    use("star-mittal")
+
+// Eliminar la coleccion
+    db.roles.drop()
