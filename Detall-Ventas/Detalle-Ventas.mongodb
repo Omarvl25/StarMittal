@@ -1,0 +1,15 @@
+db.createCollection("detalle_ventas", {
+    validator: {
+        $jsonSchema: {
+            bsonType: 'object',
+            required: ['venta_id', 'producto_id', 'cantidad', 'precio_unitario'],
+            properties: {
+                venta_id: { bsonType: 'int' },
+                producto_id: { bsonType: 'objectId' },
+                cantidad: { bsonType: 'int' },
+                precio_unitario: { bsonType: 'double' },
+                subtotal: { bsonType: 'double' }
+            }
+        }
+    }
+});

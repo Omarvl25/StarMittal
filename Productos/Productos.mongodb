@@ -1,0 +1,39 @@
+// Usar la Base de Datos
+use("star-mittal")
+
+// Crear la Validación de productos e inventario como array embebido
+db.createCollection("productos", {
+  validator: {
+    $jsonSchema: {
+      bsonType: 'object',
+      title: 'Validacion del objeto productos',
+      required: ['id_producto', 'nombre', 'categoria', 'descripcion', 'precio_compra', 'precio_venta', 'inventario'],
+      properties: {
+        
+        id_producto: { bsonType: 'int' },
+        nombre: { bsonType: 'string' },
+        categoria: { bsonType: 'string' }, // Ejemplo: "Ferretería", "Agrícola", "Maquinaria ligera", "Andamios"
+        descripcion: { bsonType: 'string' },
+        precio_compra: { bsonType: 'double' },
+        precio_venta: { bsonType: 'double' },
+
+        inventario: {
+          bsonType: 'array',
+          minItems: 1,
+          uniqueItems: true,
+          items: {
+            bsonType: 'object',
+            title: 'Validacion del objeto inventario',
+            required: ['cantidad_disponible', 'cantidad_minima', 'ubicacion', 'fecha_actualizacion'],
+            properties: {
+              cantidad_disponible: { bsonType: 'int' },
+              cantidad_minima: { bsonType: 'int' },
+              ubicacion: { bsonType: 'string' },
+              fecha_actualizacion: { bsonType: 'date' }
+            }
+          }
+        }
+      }
+    }
+  }
+});

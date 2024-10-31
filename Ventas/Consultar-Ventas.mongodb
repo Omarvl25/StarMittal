@@ -1,0 +1,5 @@
+use("star-mittal")
+
+// Consultar los registros
+   
+    db.ventas.find()

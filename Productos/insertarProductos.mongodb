@@ -1,0 +1,31 @@
+
+
+use("star-mittal")
+
+
+// Insertar un producto con inventario en la colección productos
+
+
+db.productos.insertOne({
+    id_producto: 1,
+    nombre: "Taladro Eléctrico",
+    categoria: "Maquinaria ligera",
+    descripcion: "Taladro de alta potencia para construcción",
+    precio_compra: 1200.00,
+    precio_venta: 1500.00,
+    inventario: [
+      {
+        cantidad_disponible: 30,
+        cantidad_minima: 5,
+        ubicacion: "Almacén A",
+        fecha_actualizacion: new Date("2024-10-01")
+      },
+      {
+        cantidad_disponible: 15,
+        cantidad_minima: 3,
+        ubicacion: "Sucursal 1",
+        fecha_actualizacion: new Date("2024-10-05")
+      }
+    ]
+  });
+  

@@ -1,0 +1,43 @@
+use("star-mittal")
+
+db.createCollection("ventas", {
+  validator: {
+    $jsonSchema: {
+      bsonType: 'object',
+      title: 'Validacion del objeto ventas',
+      required: ['id_venta', 'fecha_venta', 'cliente', 'tipo_venta', 'tipo_pago', 'total', 'detalles_venta'],
+      properties: {
+        id_venta: { bsonType: 'int' },
+        fecha_venta: { bsonType: 'date' },
+        cliente: {
+          bsonType: 'object',
+          required: ['id_cliente', 'nombre', 'tipo_cliente'],
+          properties: {
+            id_cliente: { bsonType: 'int' },
+            nombre: { bsonType: 'string' },
+            tipo_cliente: { bsonType: 'string' } // "Regular" o "Preferencial"
+          }
+        },
+        tipo_venta: { bsonType: 'string' }, // "Local" o "En línea"
+        tipo_pago: { bsonType: 'string' }, // "Efectivo", "Tarjeta", "Transferencia"
+        total: { bsonType: 'double' },
+        
+        detalles_venta: {
+          bsonType: 'array',
+          minItems: 1,
+          items: {
+            bsonType: 'object',
+            required: ['id_producto', 'nombre_producto', 'cantidad', 'precio_unitario', 'subtotal'],
+            properties: {
+              id_producto: { bsonType: 'int' },
+              nombre_producto: { bsonType: 'string' },
+              cantidad: { bsonType: 'int' },
+              precio_unitario: { bsonType: 'double' },
+              subtotal: { bsonType: 'double' }
+            }
+          }
+        }
+      }
+    }
+  }
+});

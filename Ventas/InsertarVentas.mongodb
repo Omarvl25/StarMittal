@@ -1,0 +1,34 @@
+
+ 
+use("star-mittal")
+
+
+
+db.ventas.insertOne({
+  id_venta: 1,
+  fecha_venta: new Date("2023-12-01"), 
+  cliente: {
+    id_cliente: 101,
+    nombre: "Juan Pérez",
+    tipo_cliente: "Preferencial"  // Debe ser "Regular" o "Preferencial"
+  },
+  tipo_venta: "Local",  // Debe ser "Local" o "En línea"
+  tipo_pago: "Efectivo",  // Debe ser "Efectivo", "Tarjeta" o "Transferencia"
+  total: 1500.00,  // Debe ser un número de tipo double
+  detalles_venta: [
+    {
+      id_producto: 1,
+      nombre_producto: "Andamio Tubular",
+      cantidad: 2,
+      precio_unitario: 500.00,  // Debe ser un número de tipo double
+      subtotal: 1000.00  // Debe ser un número de tipo double
+    },
+    {
+      id_producto: 2,
+      nombre_producto: "Escalera Metálica",
+      cantidad: 1,
+      precio_unitario: 500.00,
+      subtotal: 500.00
+    }
+  ]
+});
