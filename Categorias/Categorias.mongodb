@@ -1,0 +1,23 @@
+
+use("star-mittal");
+
+
+db.createCollection("categorias", {
+  validator: {
+    $jsonSchema: {
+      bsonType: 'object',
+      title: 'Validacion del objeto categorias',
+      required: ['id_categoria', 'nombre_categoria'],
+      properties: {
+        id_categoria: { 
+          bsonType: 'int',
+          description: "Identificador único de la categoría"
+        },
+        nombre_categoria: { 
+          bsonType: 'string',
+          description: "Nombre de la categoría"
+        }
+      }
+    }
+  }
+});

@@ -1,0 +1,35 @@
+// Usar la Base de Datos
+use("star-mittal");
+
+
+db.createCollection("proveedores", {
+  validator: {
+    $jsonSchema: {
+      bsonType: 'object',
+      title: 'Validacion del objeto proveedores',
+      required: ['id_proveedor', 'nombre', 'direccion', 'telefono'],
+      properties: {
+        id_proveedor: { 
+          bsonType: 'int',
+          description: "Identificador único del proveedor"
+        },
+        nombre: { 
+          bsonType: 'string',
+          description: "Nombre del proveedor, debe ser un texto"
+        },
+        direccion: { 
+          bsonType: 'string',
+          description: "Dirección de contacto del proveedor, debe ser un texto"
+        },
+        telefono: { 
+          bsonType: 'array',
+          description: "Lista de teléfonos de contacto del proveedor",
+          items: {
+            bsonType: 'string',
+            description: "Número de teléfono del proveedor, debe ser un texto"
+          }
+        }
+      }
+    }
+  }
+});
