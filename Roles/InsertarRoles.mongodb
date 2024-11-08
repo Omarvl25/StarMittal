@@ -1,0 +1,9 @@
+// Usar la Base de Datos
+    use("star-mittal")
+
+// Insertar en la coleccion
+    db.roles.insertOne({
+        id_rol: 100,
+        nombre_rol: "Produccion"
+    })
+  

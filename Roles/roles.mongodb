@@ -1,0 +1,18 @@
+// Usar la Base de Datos
+    use("star-mittal")
+
+// Crear la coleccion
+    db.createCollection("roles", {
+        validator: {
+            $jsonSchema: {
+                bsonType: 'object',
+                title: 'Validacion del objeto Roles',
+                required: ['id_rol', 'nombre_rol'],
+                properties: {
+                    id_rol: { bsonType: 'int' },
+                    nombre_rol: { bsonType: 'string' }
+                }
+            }
+        }
+    });
+  

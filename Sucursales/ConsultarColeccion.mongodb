@@ -1,0 +1,6 @@
+// Usar la Base de Datos
+    use("star-mittal")
+
+// Consultar los registros
+    // SELECT * FROM sucursales
+    db.sucursales.find();

@@ -1,0 +1,19 @@
+// Usar la Base de Datos
+    use("star-mittal")
+
+// Crear y validar la coleccion
+    db.createCollection("empleados", {
+        validator: {
+            $jsonSchema: {
+                bsonType: "object",
+                required: ["id_empleado", "nombre", "id_rol", "id_turno", "id_sucursal"],
+                properties: {
+                    id_empleado: { bsonType: "int" },
+                    nombre: { bsonType: "string" },
+                    id_rol: { bsonType: "int" },
+                    id_turno: { bsonType: "int" },
+                    id_sucursal: { bsonType: "int" }
+                }
+            }
+        }
+    });
