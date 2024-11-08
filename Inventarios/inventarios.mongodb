@@ -1,0 +1,40 @@
+
+
+use("star-mittal");
+
+db.createCollection("inventarios", {
+    validator: {
+      $jsonSchema: {
+        bsonType: 'object',
+        title: 'Validacion del objeto inventarios',
+        required: ['id_inventario', 'id_producto', 'cantidad', 'minimo_stock', 'maximo_stock', 'punto_reorden'],
+        properties: {
+          id_inventario: { 
+            bsonType: 'int',
+            description: "Identificador único del inventario"
+          },
+          id_producto: { 
+            bsonType: 'int',
+            description: "Clave foránea que referencia al producto"
+          },
+          cantidad: { 
+            bsonType: 'int',
+            description: "Cantidad de producto en inventario"
+          },
+          minimo_stock: { 
+            bsonType: 'int',
+            description: "Nivel mínimo de inventario"
+          },
+          maximo_stock: { 
+            bsonType: 'int',
+            description: "Nivel máximo de inventario"
+          },
+          punto_reorden: { 
+            bsonType: 'int',
+            description: "Nivel de inventario para realizar un nuevo pedido"
+          }
+        }
+      }
+    }
+  });
+  

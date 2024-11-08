@@ -1,16 +1,33 @@
-// Usar la Base de Datos
-    use("star-mittal")
+use("star-mittal");
 
-// Crear y validar la coleccion
-    db.createCollection("produccion_empleados", {
-        validator: {
-            $jsonSchema: {
-                bsonType: 'object',
-                required: ['id_produccion', 'id_empleado'],
-                properties: {
-                    id_produccion: { bsonType: 'int' },
-                    id_empleado: { bsonType: 'int' }
-                }
-            }
+
+
+db.createCollection("produccion_empleados", {
+  validator: {
+    $jsonSchema: {
+      bsonType: 'object',
+      title: 'Validacion del objeto produccion_empleados',
+      required: ['id_produccion_empleado', 'id_produccion', 'id_empleado'],
+      properties: {
+      
+        id_produccion: { 
+          bsonType: 'int',
+          description: "Referencia a la producción en la que el empleado trabajó"
+        },
+        id_producto: { 
+            bsonType: 'int',
+            description: "Referencia al producto "
+          },
+        
+        fecha_produccion: { 
+          bsonType: 'date',
+          description: "Fecha en la que se realizó la producción"
+        },
+        cantidad_producida: { 
+          bsonType: 'int',
+          description: "Cantidad de productos producidos en esta producción"
         }
-    });
+      }
+    }
+  }
+});

@@ -1,0 +1,25 @@
+use("star-mittal");
+
+db.createCollection("catalogo_proveedor", {
+  validator: {
+    $jsonSchema: {
+      bsonType: 'object',
+      title: 'Validacion del objeto catalogo_proveedor',
+      required: ['id_catalogo_proveedor', 'id_proveedor', 'id_producto'],
+      properties: {
+        id_catalogo_proveedor: { 
+          bsonType: 'int',
+          description: "Identificador único del catálogo del proveedor"
+        },
+        id_proveedor: { 
+          bsonType: 'int',
+          description: "Clave foránea que referencia al proveedor"
+        },
+        id_producto: { 
+          bsonType: 'int',
+          description: "Clave foránea que referencia al producto"
+        }
+      }
+    }
+  }
+});

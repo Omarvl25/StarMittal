@@ -1,39 +1,71 @@
-use("star-mittal")
+use("star-mittal");
 
 db.createCollection("ventas", {
   validator: {
     $jsonSchema: {
       bsonType: 'object',
       title: 'Validacion del objeto ventas',
-      required: ['id_venta', 'fecha_venta', 'cliente', 'tipo_venta', 'tipo_pago', 'total', 'detalles_venta'],
+      required: ['id_venta', 'fecha_venta', 'id_cliente', 'total', 'tipo_venta', 'tipo_pago', 'id_empleado', 'detalle_ventas'],
       properties: {
-        id_venta: { bsonType: 'int' },
-        fecha_venta: { bsonType: 'date' },
-        cliente: {
-          bsonType: 'object',
-          required: ['id_cliente', 'nombre', 'tipo_cliente'],
-          properties: {
-            id_cliente: { bsonType: 'int' },
-            nombre: { bsonType: 'string' },
-            tipo_cliente: { bsonType: 'string' } // "Regular" o "Preferencial"
-          }
+        id_venta: { 
+          bsonType: 'int',
+          description: "Identificador único de la venta"
         },
-        tipo_venta: { bsonType: 'string' }, // "Local" o "En línea"
-        tipo_pago: { bsonType: 'string' }, // "Efectivo", "Tarjeta", "Transferencia"
-        total: { bsonType: 'double' },
-        ///////////
-        detalles_venta: {
+        fecha_venta: { 
+          bsonType: 'date',
+          description: "Fecha en la que se realiza la venta"
+        },
+        id_cliente: { 
+          bsonType: 'int',
+          description: "Clave foránea que referencia al cliente"
+        },
+        total: { 
+          bsonType: 'int',
+          description: "Total a pagar de la venta"
+        },
+        tipo_venta: { 
+          bsonType: 'string',
+          description: "Tipo de venta realizada"
+        },
+        tipo_pago: { 
+          bsonType: 'string',
+          description: "Método de pago de la venta"
+        },
+        id_empleado: { 
+          bsonType: 'int',
+          description: "Clave foránea que referencia al empleado que realizó la venta"
+        },
+        detalle_ventas: {
           bsonType: 'array',
-          minItems: 1,
+          description: "Detalles específicos de los productos vendidos",
           items: {
             bsonType: 'object',
-            required: ['id_producto', 'nombre_producto', 'cantidad', 'precio_unitario', 'subtotal'],
+            required: ['id_detalle_venta', 'id_producto', 'cantidad', 'precio_unitario', 'descuento', 'numero_serie'],
             properties: {
-              id_producto: { bsonType: 'int' },
-              nombre_producto: { bsonType: 'string' },
-              cantidad: { bsonType: 'int' },
-              precio_unitario: { bsonType: 'double' },
-              subtotal: { bsonType: 'double' }
+              id_detalle_venta: { 
+                bsonType: 'int',
+                description: "Identificador único del detalle de la venta"
+              },
+              id_producto: { 
+                bsonType: 'int',
+                description: "Clave foránea que referencia al producto vendido"
+              },
+              cantidad: { 
+                bsonType: 'int',
+                description: "Cantidad de productos vendidos"
+              },
+              precio_unitario: { 
+                bsonType: 'int',
+                description: "Precio unitario del producto vendido"
+              },
+              descuento: { 
+                bsonType: 'int',
+                description: "Descuento aplicado al producto"
+              },
+              numero_serie: { 
+                bsonType: 'int',
+                description: "Número de serie del producto vendido"
+              }
             }
           }
         }

@@ -1,24 +1,33 @@
-// Usar la Base de Datos
-    use("star-mittal")
+use("star-mittal");
 
-// Crear la coleccion
 db.createCollection("sucursales", {
-    validator: {
-        $jsonSchema: {
-            bsonType: 'object',
-            required: ['nombre', 'direccion', 'telefono'],
-            properties: {
-                id_sucursal: { bsonType: 'int' },
-                nombre: { bsonType: 'string' },
-                direccion: { bsonType: 'string' },
-                telefono: { 
-                    bsonType: 'array',
-                    minItems: 1, // Especificar el minimo requerido
-                    maxItems: 5, // Especificar el maximo requerido
-                    uniqueItems: true, // No telefonos requeridos
-                    items: { bsonType: 'string' }
-                 }
-            }
+  validator: {
+    $jsonSchema: {
+      bsonType: 'object',
+      title: 'Validacion del objeto sucursales',
+      required: ['id_sucursal', 'nombre', 'direccion', 'telefono'],
+      properties: {
+        id_sucursal: { 
+          bsonType: 'int',
+          description: "Identificador único de la sucursal"
+        },
+        nombre: { 
+          bsonType: 'string',
+          description: "Nombre de la sucursal"
+        },
+        direccion: { 
+          bsonType: 'string',
+          description: "Dirección de la sucursal"
+        },
+        telefono: { 
+          bsonType: 'array',
+          items: {
+            bsonType: 'string',
+            description: "Número de teléfono de la sucursal"
+          },
+          description: "Lista de teléfonos de la sucursal"
         }
+      }
     }
-}); 
+  }
+});

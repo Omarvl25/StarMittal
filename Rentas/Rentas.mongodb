@@ -1,0 +1,63 @@
+use("star-mittal");
+
+db.createCollection("rentas", {
+  validator: {
+    $jsonSchema: {
+      bsonType: 'object',
+      title: 'Validacion del objeto rentas',
+      required: ['id_renta', 'id_cliente', 'fecha_inicio', 'fecha_fin', 'detalle_rentas'],
+      properties: {
+        id_renta: { 
+          bsonType: 'int',
+          description: "Identificador único de la renta"
+        },
+        id_cliente: { 
+          bsonType: 'int',
+          description: "Clave foránea que referencia al cliente"
+        },
+        fecha_inicio: { 
+          bsonType: 'date',
+          description: "Fecha de inicio de la renta"
+        },
+        fecha_fin: { 
+          bsonType: 'date',
+          description: "Fecha de fin de la renta"
+        },
+        detalle_rentas: {
+          bsonType: 'array',
+          description: "Detalles específicos de los productos rentados",
+          items: {
+            bsonType: 'object',
+            required: ['id_detalle_renta', 'id_producto', 'cantidad', 'precio_unitario', 'descuento', 'anticipo'],
+            properties: {
+              id_detalle_renta: { 
+                bsonType: 'int',
+                description: "Identificador único del detalle de la renta"
+              },
+              id_producto: { 
+                bsonType: 'int',
+                description: "Clave foránea que referencia al producto"
+              },
+              cantidad: { 
+                bsonType: 'int',
+                description: "Cantidad de productos rentados"
+              },
+              precio_unitario: { 
+                bsonType: 'int',
+                description: "Precio unitario del producto rentado"
+              },
+              descuento: { 
+                bsonType: 'int',
+                description: "Descuento aplicado al producto rentado"
+              },
+              anticipo: { 
+                bsonType: 'int',
+                description: "Anticipo recibido para la renta"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+});

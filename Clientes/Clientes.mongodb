@@ -7,7 +7,7 @@ db.createCollection("clientes", {
     $jsonSchema: {
       bsonType: 'object',
       title: 'Validacion del objeto clientes',
-      required: ['id_cliente', 'nombre', 'direccion', 'telefono', 'correo_electronico', 'descuento'],
+      required: ['id_cliente', 'nombre', 'direccion', 'telefono'],
       properties: {
         id_cliente: { 
           bsonType: 'int',
