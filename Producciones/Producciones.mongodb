@@ -10,7 +10,7 @@
                 properties: {
                     id_produccion: { bsonType: 'int' },
                     id_producto: { bsonType: 'int' },
-                    fecha_produccion: { bsonType: 'date' },
+                    fecha_produccion: { bsonType: 'string' },
                     cantidad_producida: { bsonType: 'int' }
                 }
             }
