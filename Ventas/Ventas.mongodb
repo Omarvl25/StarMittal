@@ -12,7 +12,7 @@ db.createCollection("ventas", {
           description: "Identificador único de la venta"
         },
         fecha_venta: { 
-          bsonType: 'date',
+          bsonType: 'string',
           description: "Fecha en la que se realiza la venta"
         },
         id_cliente: { 
@@ -40,7 +40,7 @@ db.createCollection("ventas", {
           description: "Detalles específicos de los productos vendidos",
           items: {
             bsonType: 'object',
-            required: ['id_detalle_venta', 'id_producto', 'cantidad', 'precio_unitario', 'descuento', 'numero_serie'],
+            required: ['id_detalle_venta', 'id_producto', 'cantidad', 'precio_unitario'],
             properties: {
               id_detalle_venta: { 
                 bsonType: 'int',
