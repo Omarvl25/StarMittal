@@ -5,7 +5,7 @@ db.createCollection("rentas", {
     $jsonSchema: {
       bsonType: 'object',
       title: 'Validacion del objeto rentas',
-      required: ['id_renta', 'id_cliente', 'fecha_inicio', 'fecha_fin', 'detalle_rentas'],
+      required: ['id_renta', 'id_cliente', 'fecha_inicio_renta', 'fecha_fin_renta', 'detalle_rentas'],
       properties: {
         id_renta: { 
           bsonType: 'int',
@@ -15,12 +15,12 @@ db.createCollection("rentas", {
           bsonType: 'int',
           description: "Clave foránea que referencia al cliente"
         },
-        fecha_inicio: { 
-          bsonType: 'date',
+        fecha_inicio_renta: { 
+          bsonType: 'string',
           description: "Fecha de inicio de la renta"
         },
-        fecha_fin: { 
-          bsonType: 'date',
+        fecha_fin_renta: { 
+          bsonType: 'string',
           description: "Fecha de fin de la renta"
         },
         detalle_rentas: {
