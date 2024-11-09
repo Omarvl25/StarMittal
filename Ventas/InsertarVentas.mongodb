@@ -1,0 +1,94 @@
+// Usar la Base de Datos
+use("star-mittal")
+
+// Insertar muchos registros a la coleccion
+    db.ventas.insertMany([
+        {
+            "id_venta": 3,
+            "fecha_venta": "2024-10-01",
+            "id_cliente": 5,
+            "total": 1500.00,
+            "tipo_venta": "Local",
+            "tipo_pago": "Efectivo",
+            "id_empleado": 4,
+            "detalle_ventas": [
+                {
+                    "id_detalle_venta": 3,
+                    "id_producto": 1,
+                    "cantidad": 5,
+                    "precio_unitario": 100.00
+                }
+            ]
+        },
+        {
+            "id_venta": 4,
+            "fecha_venta": "2024-10-02",
+            "id_cliente": 3,
+            "total": 2500.00,
+            "tipo_venta": "Línea",
+            "tipo_pago": "Transferencia",
+            "id_empleado": 4,
+            "detalle_ventas": [
+                {
+                    "id_detalle_venta": 4,
+                    "id_producto": 2,
+                    "cantidad": 3,
+                    "precio_unitario": 50.00
+                }
+            ]
+        },
+        {
+            "id_venta": 5,
+            "fecha_venta": "2024-10-03",
+            "id_cliente": 4,
+            "total": 3000.00,
+            "tipo_venta": "Local",
+            "tipo_pago": "Efectivo",
+            "id_empleado": 5,
+            "detalle_ventas": [
+                {
+                    "id_detalle_venta": 5,
+                    "id_producto": 3,
+                    "cantidad": 4,
+                    "precio_unitario": 75.00
+                }
+            ]
+        },
+        {
+            "id_venta": 6,
+            "fecha_venta": "2024-10-04",
+            "id_cliente": 3,
+            "total": 2000.00,
+            "tipo_venta": "Local",
+            "tipo_pago": "Efectivo",
+            "id_empleado": 4,
+            "detalle_ventas": [
+                {
+                    "id_detalle_venta": 6,
+                    "id_producto": 4,
+                    "cantidad": 2,
+                    "precio_unitario": 75.00
+                }
+            ]
+        },
+        {
+            "id_venta": 7,
+            "fecha_venta": "2024-10-05",
+            "id_cliente": 4,
+            "total": 3500.00,
+            "tipo_venta": "Línea",
+            "tipo_pago": "Transferencia",
+            "id_empleado": 4,
+            "detalle_ventas": [
+                {
+                    "id_detalle_venta": 7,
+                    "id_producto": 1,
+                    "cantidad": 1,
+                    "precio_unitario": 200.00
+                }
+            ]
+        }
+    ])
+
+      
+  

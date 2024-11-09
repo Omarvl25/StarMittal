@@ -1,0 +1,38 @@
+// Usar la Base de Datos
+    use("star-mittal")
+
+// Insertar un solo registro en la coleccion
+    db.roles.insertOne({
+        id_rol: 100,
+        nombre_rol: "Produccion"
+    })
+
+// Usar la Base de Datos
+    use("star-mittal")
+
+// Insertar muchos registros a la coleccion
+    db.roles.insertMany([
+        {
+            "id_rol": 1,
+            "nombre_rol": "Propietario"
+        },
+        {
+            "id_rol": 2,
+            "nombre_rol": "Encargado de Producción"
+        },
+        {
+            "id_rol": 3,
+            "nombre_rol": "Encargado de Inventario"
+        },
+        {
+            "id_rol": 4,
+            "nombre_rol": "Operario de Producción"
+        },
+        {
+            "id_rol": 5,
+            "nombre_rol": "Limpieza"
+        }
+    ])
+
+      
+  

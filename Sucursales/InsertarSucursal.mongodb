@@ -1,0 +1,33 @@
+// Usar la Base de Datos
+    use("star-mittal")
+
+// Insertar un registro en la coleccion
+    db.sucursales.insertOne({
+        id_sucursal: 1,
+        nombre: "Sucursal Principal",
+        direccion: "Carretera Federal Guadalajara - Morelia 6–20, 59920 Santiago Tangamandapio, Mich., México",
+        telefono: [
+            "9876543210",
+            "3511234567"
+        ]
+    });
+
+// Usar la Base de Datos
+    use("star-mittal")
+
+// Insertar un registro en la coleccion
+    db.sucursales.insertMany([
+        {
+            "id_sucursal": 1,
+            "nombre": "Sucursal Principal",
+            "direccion": "Carretera Federal Guadalajara - Morelia 6–20, 59920 Santiago Tangamandapio, Mich., México",
+            "telefono": [
+                "9876543210",
+                "3511234567"
+            ]
+        }
+    ])
+
+
+
+  
