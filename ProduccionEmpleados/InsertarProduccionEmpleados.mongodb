@@ -1,0 +1,37 @@
+// Usar la Base de Datos
+use("star-mittal")
+
+// Insertar muchos registros a la coleccion
+    db.produccion_empleados.insertMany([
+        {
+            "id_produccion": 1,
+            "id_empleado": 4
+        },
+        {
+            "id_produccion": 1,
+            "id_empleado": 6
+        },
+        {
+            "id_produccion": 1,
+            "id_empleado": 7
+        },
+        {
+            "id_produccion": 2,
+            "id_empleado": 4
+        },
+        {
+            "id_produccion": 2,
+            "id_empleado": 6
+        },
+        {
+            "id_produccion": 3,
+            "id_empleado": 4
+        },
+        {
+            "id_produccion": 3,
+            "id_empleado": 7
+        }
+    ])
+
+      
+  

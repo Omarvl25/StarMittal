@@ -1,0 +1,47 @@
+// Usar la Base de Datos
+    use("star-mittal")
+
+// Insertar un registro en la coleccion
+    db.empleados.insertOne({
+        id_empleado: 1,
+        nombre: "Manuel",
+        id_rol: 1,
+        id_turno: 1,
+        id_sucursal: 1
+          
+    })
+
+// Usar la Base de Datos
+    use("star-mittal")
+
+// Insertar muchos registros en la coleccion
+    db.empleados.insertMany([
+        {
+            "id_empleado": 4,
+            "nombre": "Manuel",
+            "id_rol": 2,
+            "id_turno": 1,
+            "id_sucursal": 4
+        },
+        {
+            "id_empleado": 5,
+            "nombre": "Omar",
+            "id_rol": 3,
+            "id_turno": 2,
+            "id_sucursal": 4
+        },
+        {
+            "id_empleado": 6,
+            "nombre": "Abraham",
+            "id_rol": 4,
+            "id_turno": 3,
+            "id_sucursal": 4
+        },
+        {
+            "id_empleado": 7,
+            "nombre": "Jesús",
+            "id_rol": 4,
+            "id_turno": 3,
+            "id_sucursal": 4
+        }
+    ])

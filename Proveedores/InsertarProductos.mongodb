@@ -1,0 +1,66 @@
+// Usar la Base de Datos
+    use("star-mittal")
+
+// Insertar un registro en la coleccion
+    db.productos.insertOne({
+        id_producto: 1,
+        nombre_producto: "Andamio Estándar",
+        id_categoria: 1
+    })
+    
+// Usar la Base de Datos
+    use("star-mittal")
+
+// Insertar muchos registros a la coleccion 
+    db.productos.insertMany([
+        {
+            "id_producto": 1,
+            "nombre_producto": "Andamio Estándar",
+            "id_categoria": 1
+        },
+        {
+            "id_producto": 2,
+            "nombre_producto": "Andamio Banquetero",
+            "id_categoria": 1
+        },
+        {
+            "id_producto": 3,
+            "nombre_producto": "Tablón Metálico",
+            "id_categoria": 1
+        },
+        {
+            "id_producto": 4,
+            "nombre_producto": "Plataforma para Andamio",
+            "id_categoria": 1
+        },
+        {
+            "id_producto": 5,
+            "nombre_producto": "Escalera para Andamio",
+            "id_categoria": 1
+        },
+        {
+            "id_producto": 6,
+            "nombre_producto": "Llantas para Andamio",
+            "id_categoria": 1
+        },
+        {
+            "id_producto": 7,
+            "nombre_producto": "Revolvedora",
+            "id_categoria": 2
+        },
+        {
+            "id_producto": 8,
+            "nombre_producto": "Bailarina Compactadora",
+            "id_categoria": 2
+        },
+        {
+            "id_producto": 9,
+            "nombre_producto": "Martillo Demoledor",
+            "id_categoria": 2
+        },
+        {
+            "id_producto": 10,
+            "nombre_producto": "Vibrador de Concreto",
+            "id_categoria": 2
+        }
+    ])

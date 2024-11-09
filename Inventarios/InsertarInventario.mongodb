@@ -1,0 +1,86 @@
+// Usar la Base de Datos
+    use("star-mittal")
+
+// Insertar muchos registros a la coleccion
+    db.inventarios.insertMany([
+        {
+            "id_inventario": 1,
+            "id_producto": 1,
+            "cantidad": 50,
+            "minimo_stock": 10,
+            "maximo_stock": 100,
+            "punto_reorden": 20
+        },
+        {
+            "id_inventario": 2,
+            "id_producto": 2,
+            "cantidad": 30,
+            "minimo_stock": 5,
+            "maximo_stock": 50,
+            "punto_reorden": 10
+        },
+        {
+            "id_inventario": 3,
+            "id_producto": 3,
+            "cantidad": 40,
+            "minimo_stock": 8,
+            "maximo_stock": 60,
+            "punto_reorden": 15
+        },
+        {
+            "id_inventario": 4,
+            "id_producto": 4,
+            "cantidad": 20,
+            "minimo_stock": 3,
+            "maximo_stock": 30,
+            "punto_reorden": 5
+        },
+        {
+            "id_inventario": 5,
+            "id_producto": 5,
+            "cantidad": 60,
+            "minimo_stock": 12,
+            "maximo_stock": 120,
+            "punto_reorden": 25
+        },
+        {
+            "id_inventario": 6,
+            "id_producto": 6,
+            "cantidad": 80,
+            "minimo_stock": 15,
+            "maximo_stock": 150,
+            "punto_reorden": 30
+        },
+        {
+            "id_inventario": 7,
+            "id_producto": 7,
+            "cantidad": 25,
+            "minimo_stock": 4,
+            "maximo_stock": 45,
+            "punto_reorden": 10
+        },
+        {
+            "id_inventario": 8,
+            "id_producto": 8,
+            "cantidad": 35,
+            "minimo_stock": 6,
+            "maximo_stock": 55,
+            "punto_reorden": 12
+        },
+        {
+            "id_inventario": 9,
+            "id_producto": 9,
+            "cantidad": 70,
+            "minimo_stock": 20,
+            "maximo_stock": 140,
+            "punto_reorden": 35
+        },
+        {
+            "id_inventario": 10,
+            "id_producto": 10,
+            "cantidad": 10,
+            "minimo_stock": 1,
+            "maximo_stock": 20,
+            "punto_reorden": 2
+        }
+    ])

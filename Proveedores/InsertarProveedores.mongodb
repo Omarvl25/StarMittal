@@ -1,0 +1,46 @@
+// Usar la Base de Datos
+    use("star-mittal")
+
+// Insertar muchos registros a la coleccion
+    db.proveedores.insertMany([
+        {
+            "id_proveedor": 2,
+            "nombre": "Antarix",
+            "direccion": "Ciudad de México",
+            "telefono": [
+                "5551234567"
+            ]
+        },
+        {
+            "id_proveedor": 3,
+            "nombre": "Mayoreo Cárdenas",
+            "direccion": "Guadalajara, Jalisco",
+            "telefono": [
+                "3339876543"
+            ]
+        },
+        {
+            "id_proveedor": 4,
+            "nombre": "Vekcer",
+            "direccion": "León, Guanajuato",
+            "telefono": [
+                "4774567890"
+            ]
+        },
+        {
+            "id_proveedor": 5,
+            "nombre": "Joper Trupper",
+            "direccion": "Querétaro, Querétaro",
+            "telefono": [
+                "4428765432"
+            ]
+        },
+        {
+            "id_proveedor": 6,
+            "nombre": "Centauro",
+            "direccion": "Morelia, Michoacán",
+            "telefono": [
+                "4431239876"
+            ]
+        }
+    ])

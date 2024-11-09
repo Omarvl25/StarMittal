@@ -1,0 +1,31 @@
+// Usar la Base de Datos
+    use("star-mittal")
+
+// Insertar un registro en la coleccion
+    db.categorias.insertOne({
+        id_categoria: 1,
+        nombre_categoria: "Ferreteria"          
+    })
+
+// Usar la Base de Datos
+    use("star-mittal")
+
+// Insertar varios registros en la coleccion
+    db.categorias.insertMany([
+        {
+            "id_categoria": 1,
+            "nombre_categoria": "Andamios"
+        },
+        {
+            "id_categoria": 2,
+            "nombre_categoria": "Maquinaria Ligera"
+        },
+        {
+            "id_categoria": 3,
+            "nombre_categoria": "Ferretería"
+        },
+        {
+            "id_categoria": 4,
+            "nombre_categoria": "Agrícola"
+        }
+    ])

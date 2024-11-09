@@ -1,0 +1,27 @@
+// Usar la Base de Datos
+    use("star-mittal")
+
+// Insertar muchos registros a la coleccion
+    db.producciones.insertMany([
+        {
+            "id_produccion": 1,
+            "id_producto": 1,
+            "fecha_produccion": "2024-10-01",
+            "cantidad_producida": 10
+        },
+        {
+            "id_produccion": 2,
+            "id_producto": 2,
+            "fecha_produccion": "2024-10-02",
+            "cantidad_producida": 15
+        },
+        {
+            "id_produccion": 3,
+            "id_producto": 5,
+            "fecha_produccion": "2024-10-03",
+            "cantidad_producida": 20
+        }
+    ])
+
+      
+  

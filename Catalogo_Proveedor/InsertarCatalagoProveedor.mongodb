@@ -1,0 +1,59 @@
+// Usar la Base de Datos
+    use("star-mittal")
+
+// Insertar muchos registros a la coleccion
+    db.catalogo_proveedor.insertMany([
+        {
+            "id_catalogo_proveedor": 1,
+            "id_proveedor": 3,
+            "id_producto": 1
+        },
+        {
+            "id_catalogo_proveedor": 2,
+            "id_proveedor": 2,
+            "id_producto": 2
+        },
+        {
+            "id_catalogo_proveedor": 3,
+            "id_proveedor": 6,
+            "id_producto": 3
+        },
+        {
+            "id_catalogo_proveedor": 4,
+            "id_proveedor": 5,
+            "id_producto": 4
+        },
+        {
+            "id_catalogo_proveedor": 5,
+            "id_proveedor": 4,
+            "id_producto": 5
+        },
+        {
+            "id_catalogo_proveedor": 6,
+            "id_proveedor": 2,
+            "id_producto": 6
+        },
+        {
+            "id_catalogo_proveedor": 7,
+            "id_proveedor": 3,
+            "id_producto": 7
+        },
+        {
+            "id_catalogo_proveedor": 8,
+            "id_proveedor": 4,
+            "id_producto": 8
+        },
+        {
+            "id_catalogo_proveedor": 9,
+            "id_proveedor": 5,
+            "id_producto": 9
+        },
+        {
+            "id_catalogo_proveedor": 10,
+            "id_proveedor": 6,
+            "id_producto": 10
+        }
+    ])
+
+      
+  

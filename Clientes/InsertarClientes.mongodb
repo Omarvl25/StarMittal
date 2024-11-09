@@ -1,0 +1,43 @@
+// Usar la Base de Datos
+    use("star-mittal")
+
+// Insertar un registro en la coleccion
+    db.clientes.insertOne({
+            "id_cliente": 1,
+            "nombre_cliente": "Ana López",
+            "direccion": "Av. Principal 123",
+            "telefono": [
+                "3511231237"
+            ]
+    })
+
+// Usar la Base de Datos
+    use("star-mittal")
+
+// Insertar muchos registros en la coleccion
+    db.clientes.insertMany([
+        {
+            "id_cliente": 3,
+            "nombre": "Juan Pérez",
+            "direccion": "Calle Principal 123, Santiago Tangamandapio, Mich.",
+            "telefono": [
+                "3511234567"
+            ]
+        },
+        {
+            "id_cliente": 4,
+            "nombre": "María López",
+            "direccion": "Avenida Central 456, Jacona, Mich.",
+            "telefono": [
+                "3519876543"
+            ]
+        },
+        {
+            "id_cliente": 5,
+            "nombre": "Carlos García",
+            "direccion": "Calle Norte 789, Zamora, Mich.",
+            "telefono": [
+                "3515678901"
+            ]
+        }
+    ])
