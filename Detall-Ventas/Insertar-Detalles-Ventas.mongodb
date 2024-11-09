@@ -1,8 +1,0 @@
-db.detalle_ventas.insertOne({
-    venta_id: 1,
-    producto_id: ObjectId("unique_producto_id"),
-    cantidad: 3,
-    precio_unitario: 83.58,
-    subtotal: 250.74  // Calculado como cantidad * precio_unitario
-});
-//
