@@ -1,3 +1,6 @@
+-----------
+---Omar Vega----
+
 CREATE OR REPLACE PROCEDURE registrar_devolucion(
     _id_renta INT -- ID de la renta que se está devolviendo
 )
@@ -31,6 +34,8 @@ BEGIN
 END;
 $$;   
 -------------------------
+-----
+
 
 
 CALL registrar_devolucion(7);
