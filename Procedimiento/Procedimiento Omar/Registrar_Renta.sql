@@ -1,3 +1,6 @@
+
+------------------------------
+
 CREATE OR REPLACE PROCEDURE registrar_renta(
     _id_cliente INT,
     _id_empleado INT,

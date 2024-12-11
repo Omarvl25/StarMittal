@@ -29,8 +29,8 @@ BEGIN
     -- Notificación de éxito
     RAISE NOTICE 'Devolución registrada exitosamente. La máquina con ID % está ahora disponible.', maquina_id;
 END;
-$$;
-
+$$;   
+-------------------------
 
 
 CALL registrar_devolucion(7);
